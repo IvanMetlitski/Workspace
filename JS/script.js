@@ -1,18 +1,16 @@
-const numberOfFilms = prompt('How many films do you watch?','');
+const num = 50;
 
-let personalMovieDB = {
-    count : numberOfFilms,
-    movies : {},
-    actors : {},
-    genres : [],
-    privat: false,
-};
-
-const whatLastFilm = prompt('One of saw film in last?');
-const whatIsYourMark = prompt('What is your mark?');
-
-
-personalMovieDB.movies[whatLastFilm] = whatLastFilm;
-personalMovieDB.movies[whatIsYourMark] = whatIsYourMark;
-
-console.log(personalMovieDB);
+switch (num) {
+    case 49:
+        console.log("Wrong");
+        break;
+    case 51:
+        console.log("Wrong");
+        break;
+    case 50:
+        console.log('Right');
+        break;
+    default:
+        console.log("not this time");
+        break;
+}
