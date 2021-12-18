@@ -1,70 +1,36 @@
-let numberOfFilms;
+'use strict'
 
-function start () {
-    numberOfFilms = +prompt('How many films do you watch?', '');
-
-    while (numberOfFilms === '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt('How many films do you watch?', '');
+let options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        background: 'red',
+    },
+    makeTest: function () {
+        console.log('Test complete')
     }
-}
-
-start();
-
-let personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false,
 };
+// let counter = 0;
+//
+// for (let key in options) {
+//     if (typeof (options[key]) === 'object') {
+//         for (let i in options[key]) {
+//         console.log(`Property ${i} have a value ${options[key][i]}`)
+//             counter++
+//         }
+//     } else {
+//         console.log(`Property ${key} have a value ${options[key]}`)
+//         counter++
+//     }
+// }
+// console.log(counter)
 
-function rememberMyFilms () {
-    for (i = 0; i < 2; i++) {
-        const a = prompt('One of saw film in last?');
-        const b = prompt('What is your mark?');
-        if (a !== null && b !== null && a !== '' && b !== '' && a.length < 50 && b.length < 50) {
-            personalMovieDB.movies[a] = b;
-            console.log('Well done');
-        } else {
-            console.log('Error');
-            i--;
-        }
-    }
-}
+// console.log(Object.keys(options).length)
 
-rememberMyFilms();
+// options.makeTest();
 
-function detectPersonalLevel () {
-    if (personalMovieDB.count < 10) {
-        console.log('To little show')
-    }
-    else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-        console.log('You are usual user')
-    }
-    else if (personalMovieDB.count > 30) {
-        console.log('You are monster!')
-    }
-    else {
-        console.log('Oyoyoyoyoy')
-    }
-}
+const {border, background} = options.colors;
 
-function showMyDB () {
-    if (personalMovieDB.privat === false) {
-        console.log(personalMovieDB.privat)
-    }
-}
-
-let writeYourGenres = function () {
-    for (i = 1; i <= 3; i++) {
-        personalMovieDB.genres[i-1] = prompt(`Your favourite genre number ${i} ?`, '');
-    }
-}
-
-showMyDB();
-
-detectPersonalLevel();
-
-writeYourGenres();
-
-console.log(personalMovieDB);
+console.log(border);
