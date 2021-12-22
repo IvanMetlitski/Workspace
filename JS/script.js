@@ -1,36 +1,78 @@
 'use strict'
 
-let options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        background: 'red',
-    },
-    makeTest: function () {
-        console.log('Test complete')
-    }
-};
-// let counter = 0;
+// function copy (mainObj) {
+//     let objCopy = {};
 //
-// for (let key in options) {
-//     if (typeof (options[key]) === 'object') {
-//         for (let i in options[key]) {
-//         console.log(`Property ${i} have a value ${options[key][i]}`)
-//             counter++
-//         }
-//     } else {
-//         console.log(`Property ${key} have a value ${options[key]}`)
-//         counter++
+//     for (let key in mainObj) {
+//         objCopy[key] = mainObj[key];
 //     }
+//
+//         return objCopy;
+//
 // }
-// console.log(counter)
 
-// console.log(Object.keys(options).length)
+const numbers = {
+    a: 10,
+    b: 20,
+    c: 30,
+    d: {
+        z: 15,
+        x: 30
+    }
+}
 
-// options.makeTest();
+// const newObj = copy(numbers);
+//
+// console.log(newObj)
 
-const {border, background} = options.colors;
+// const add = {
+//     z: 15,
+//     e: 23,
+// }
+//
+// console.log(Object.assign(numbers,add))
 
-console.log(border);
+// const clone = Object.assign({},numbers)
+//
+// clone.a = 33;
+//
+// console.log(numbers);
+// console.log(clone)
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
+// newArray[1] = 'fgfgfg'
+//
+// console.log(oldArray)
+// console.log(newArray)
+
+// const video = ['youtube', 'tiktok','rutube'],
+//       blogs = ['wordpress', 'livejournal', 'twitter'],
+//       internet = [...video,...blogs, 'vk','facebook'];
+//
+// console.log(internet)
+
+// function log (a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+//
+// const num = [3, 5, 6];
+//
+// log(...num);
+
+
+const testArray = [1, 4, 5, 7];
+
+const testedArray = [...testArray]
+console.log(testedArray);
+
+const objObj = {
+    one: 1,
+    two: 2,
+    three: 3
+}
+
+const newObjObj = {...objObj};
+console.log(newObjObj)
